@@ -28,33 +28,40 @@ var resultado = numero === 1 ? "Si soy un 1" : "No soy uno";
 console.log(resultado);
 
 
-// ######################################################### Juego de piedra papel o tijera ##########################
+// ######################################################### Rock, Paper, Scissors Game ##########################
 function jugar() {
-    const opcionUsuario = prompt("Elige una opción: piedra, papel o tijeras").toLowerCase();
+    // Prompt the user to choose an option: rock, paper, or scissors, and convert their input to lowercase.
+    const opcionUsuario = prompt("Choose an option: rock, paper, or scissors").toLowerCase();
 
-    if (opcionUsuario === "piedra" || opcionUsuario === "papel" || opcionUsuario === "tijeras") {
-        const opciones = ["piedra", "papel", "tijeras"];
+    // Check if the user's choice is valid (rock, paper, or scissors).
+    if (opcionUsuario === "rock" || opcionUsuario === "paper" || opcionUsuario === "scissors") {
+        // Create an array of options for the computer to choose from.
+        const opciones = ["rock", "paper", "scissors"];
+        // Generate a random index to select an option for the computer.
         const opcionMaquina = opciones[Math.floor(Math.random() * 3)];
 
-        console.log(`Tu elección: ${opcionUsuario}`);
-        console.log(`Elección de la máquina: ${opcionMaquina}`);
+        // Display the user's choice and the computer's choice.
+        console.log(`Your choice: ${opcionUsuario}`);
+        console.log(`Computer's choice: ${opcionMaquina}`);
 
+        // Determine the game result based on the choices.
         if (opcionUsuario === opcionMaquina) {
-            console.log("Empate");
+            console.log("It's a tie");
         } else if (
-            (opcionUsuario === "piedra" && opcionMaquina === "tijeras") ||
-            (opcionUsuario === "papel" && opcionMaquina === "piedra") ||
-            (opcionUsuario === "tijeras" && opcionMaquina === "papel")
+            (opcionUsuario === "rock" && opcionMaquina === "scissors") ||
+            (opcionUsuario === "paper" && opcionMaquina === "rock") ||
+            (opcionUsuario === "scissors" && opcionMaquina === "paper")
         ) {
-            console.log("¡Ganaste!");
+            console.log("You win!");
         } else {
-            console.log("Perdiste");
+            console.log("You lose");
         }
     } else {
-        console.log("Opción inválida. Por favor, elige entre piedra, papel o tijeras.");
+        // If the user's choice is not valid, display an error message.
+        console.log("Invalid option. Please choose rock, paper, or scissors.");
     }
 }
 
-// Llama a la función para comenzar el juego
+// Call the function to start the game.
 jugar();
 
