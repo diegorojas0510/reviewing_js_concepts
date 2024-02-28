@@ -30,9 +30,9 @@ fun()
 
 //*********************************************************************************
 // TODO Ejemplo Hormigas y Humanos
-var humanos  = "Humanos no pueden ver la comida de las hormigas, "; // Humanos no pueden ver la comida de las hormigas
+var humanos  = "Humanos no pueden ver la comida de las hormigas, o muchos no ver las hormigas ";
 function hormiga(){
-     var comida = "Mientras las hormigas pueden ver a los humanos y comer su comida"; //
+     var comida = "Mientras las hormigas pueden ver a los humanos y comer su comida";
      return humanos + " " + comida;
 }
 console.log(hormiga());

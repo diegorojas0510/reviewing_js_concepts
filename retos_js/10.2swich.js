@@ -17,6 +17,11 @@ switch (number){
 
 
 
+
+
+
+
+
 function game(player1, player2) {
     switch (player1) {
         case "rock":

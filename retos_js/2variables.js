@@ -1,5 +1,5 @@
 // variables representación de un lugar en memoria
-// se declara con la palabra reservada var
+// se declara con la palabra reservada var, const let
 var nombre = "Diego";
 console.log(nombre);
 // Estados de una variable

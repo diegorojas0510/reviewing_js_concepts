@@ -24,23 +24,22 @@ var a = 1; //Asignamos un valor a la variable
 5 <= 6 //Compara y valida si el 5 es menor o igual al 6
 5 >= 6 //Compara y valida si el 5 es mayor o igual al 6
 
-a && b //Valida si ambas variables son verdaderas para que se cumpla la condición
-a || b //Aquí se cumple la condición si alguna de las dos variables es verdadera
+//a && b //Valida si ambas variables son verdaderas para que se cumpla la condición
+//a || b //Aquí se cumple la condición si alguna de las dos variables es verdadera
 
 var edad = 40
 edad++ //Incrementa el valor en 1
 
 edad += 2 //Incrementa el valor por 2
 
+
+// Todo En este desafío vas a recibir un parámetro secreto en la función solution. Debes retornar true si el número secreto es mayor a 5 y false si es menor o igual.
 function solution(secreto) {
-    // Tu código aquí 👈
-    var number = 5;
-    Boolean(secreto > number);
-    Boolean(secreto <= number);
+    return !(secreto <= 5);
 }
 
-solution(1);
-solution(7);
-solution(10);
+console.log(solution(1));
+console.log(solution(7));
+console.log(solution(10));
 
 

@@ -1,0 +1,29 @@
+Que es JS:
+* JavaScript es un lenguaje de programación ampliamente utilizado en el desarrollo web
+
+* JavaScript es un lenguaje de programación de alto nivel, interpretado y orientado a objetos. Fue creado originalmente
+ para mejorar la interactividad en sitios web, permitiendo a los desarrolladores web crear elementos dinámicos y aplicaciones web interactivas.
+  algunas características clave de JavaScript:
+
+* Interactividad en el navegador: JavaScript se utiliza principalmente en los navegadores web para agregar funcionalidad a sitios web.
+Puede controlar el comportamiento de páginas web, responder a eventos del usuario y manipular el contenido en tiempo real.
+
+* Lenguaje de programación del lado del cliente: JavaScript se ejecuta en el navegador del usuario (lado del cliente),
+lo que significa que no requiere una comunicación constante con el servidor. Esto permite una experiencia de usuario más rápida y dinámica.
+
+* Amplia adopción: JavaScript es compatible con la mayoría de los navegadores web modernos, lo que lo convierte en una herramienta esencial para el desarrollo web.
+
+* Ecosistema robusto: JavaScript tiene una amplia variedad de bibliotecas y marcos (como jQuery, React, Angular, Vue.js, Node.js, entre otros)
+ que facilitan el desarrollo de aplicaciones web y aplicaciones del lado del servidor.
+
+* Lenguaje versátil: JavaScript se ha expandido más allá del navegador y se utiliza en el desarrollo de aplicaciones de servidor, aplicaciones de escritorio, aplicaciones móviles y más.
+
+* JavaScript es un componente esencial en el desarrollo web moderno y se ha convertido en uno de los lenguajes de programación más populares
+ y ampliamente utilizados en el mundo de la tecnología.
+
+
+Diferencias entre "var", "let", "const"
+
+var:  es global o local dependiendo donde se declare
+let:  tienen un alcance de bloque y se le puede reasignar el valor
+let y const: tienen un alcance de bloque una vez declarada no se le puede reasignar valores

@@ -1,3 +1,6 @@
+// Todo Que es un array: es una estructura de datos fundamental en programación que se utiliza
+// TODO para almacenar colecciones de datos de elementos o valores del mismo tipo.
+
 var frutas = ["manzana", "pera", "fresa", "cereza"];
 console.log(frutas);
 console.log(frutas[1]);
@@ -22,14 +25,15 @@ console.log(frutas);
 var deleteFruit = frutas.shift("Uvas");
 console.log(frutas);
 
+// saber la posición de un elemento
 var posicion = frutas.indexOf("fresa");
 console.log(posicion);
 console.log(frutas);
 
 
 
-// En este desafío vas a recibir un parámetro arraySecreto en la función solution.
-// Debes retornar true si el primer elemento del arraySecreto es de tipo string y debes retornar false si es de cualquier otro tipo.
+// todo En este desafío vas a recibir un parámetro arraySecreto en la función solution.
+// todo Debes retornar true si el primer elemento del arraySecreto es de tipo string y debes retornar false si es de cualquier otro tipo.
 function solution(arraySecreto) {
     // Verificar si el array no está vacío
     if (arraySecreto.length > 0) {

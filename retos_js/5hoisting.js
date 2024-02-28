@@ -1,5 +1,5 @@
 /*
-hoisting es cuando las variables y las funciones se declaran antes de que se procese cualquier linea de código,
+todo hoisting es cuando las variables y las funciones se declaran antes de que se procese cualquier linea de código,
  esto sucede unicamente cuando utilizas var y funtion.
  Esto no sucede con ecmascript 6 ya que de hay en adelante surgieron una nuevas variables const y let
 */
@@ -17,7 +17,7 @@ console.log(miNombre)
  var miNombre = "Diego"
 
 /*
-Aquí lo que pas aes lo siguiente:
+Aquí lo que pasa es lo siguiente:
 el navegador reconoce la variable miNombre y dice bueno aquí tengo esta variable debo hacer algo con ella la voy a guardar
 
     miNombre = undefined
