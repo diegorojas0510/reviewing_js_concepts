@@ -1,12 +1,39 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Esto centra verticalmente la imagen */
-    margin: 0; /* Elimina los márgenes predeterminados del cuerpo */
+h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 24px; /* Tamaño de fuente deseado */
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
 }
 
-img {
-    max-width: 100%;
-    max-height: 100%;
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que las imágenes se envuelvan en varias filas si es necesario */
+    justify-content: center; /* Centra horizontalmente las imágenes */
+    align-items: center; /* Centra verticalmente las imágenes */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+button {
+    display: block; /* Hacer que el botón sea un bloque para poder centrarlo */
+    margin: 0 auto; /* Centra horizontalmente el botón */
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Agregamos una transición para suavizar el cambio de color */
+}
+
+button:hover {
+    background-color: #00b32d; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}
+
+.img {
+    width: 200px; /* Ancho deseado */
+    height: 200px; /* Alto deseado */
+    object-fit: cover; /* Para mantener la relación de aspecto y llenar el contenedor */
+    margin: 10px; /* Espacio entre las imágenes */
 }
