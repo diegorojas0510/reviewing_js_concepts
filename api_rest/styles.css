@@ -37,3 +37,10 @@ button:hover {
     object-fit: cover; /* Para mantener la relación de aspecto y llenar el contenedor */
     margin: 10px; /* Espacio entre las imágenes */
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
