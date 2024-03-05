@@ -1,30 +1,49 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Perros</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<h1>Perros Random</h1>
-<div class="image-container">
-    <img class="img" id="img1" src="" alt="Dog" >
-    <img class="img" id="img2" src="" alt="Dog">
-    <img class="img" id="img3" src="" alt="Dog">
-    <img class="img" id="img4" src="" alt="Dog">
-    <img class="img" id="img5" src="" alt="Dog">
-    <img class="img" id="img6" src="" alt="Dog">
-    <img class="img" id="img7" src="" alt="Dog">
-    <img class="img" id="img8" src="" alt="Dog">
-    <img class="img" id="img9" src="" alt="Dog">
-    <img class="img" id="img10" src="" alt="Dog">
-</div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Perros</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Dogs App</h1>
+        <span id="error"></span>
 
-<button> Reload </button>
+        <section id="randomDogs">
+            <h2>Perros Aleatorios</h2>
+            <article>
+                <div class="image-container">
+                <img class="img" id="img1" src="" alt="Dog" >
+                <img class="img" id="img2" src="" alt="Dog" >
+                <button id="1"> Guardar dog en favoritos </button>
+                </div>
+            </article>
 
-<script src="main.js"></script>
-</body>
+            <article>
+                <div class="image-container">
+                    <img class="img" id="img3" src="" alt="Dog" >
+                    <img class="img" id="img4" src="" alt="Dog">
+
+                    <button id="reload"> Reload </button>
+                </div>
+            </article>
+
+        </section>
+
+        <section id="favoritesDogs">
+            <h2>Perros Favoritos</h2>
+
+            <article>
+                <div class="image-container">
+                <img class="img" id="img5" src="" alt="Dog" >
+                <button id="5"> Sacar al dog de favoritos </button>
+                </div>
+            </article>
+        </section>
+
+        <script src="main.js"></script>
+    </body>
 </html>
