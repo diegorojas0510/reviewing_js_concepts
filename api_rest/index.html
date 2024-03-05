@@ -4,41 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Perros</title>
+    <title>App Cats</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Dogs App</h1>
+<h1>Cats App</h1>
 
 <span id="error"></span>
 
-<section id="randomDogs">
-    <h2>Perros Aleatorios</h2>
+<section id="loadRandomCats">
+    <h2>Michis Aleatorios</h2>
+
     <article>
         <div class="image-container">
-            <img class="img" id="img1" src="" alt="Dog" data-id="1">
-            <button id="favorites1" onclick="saveFavouriteDogs(1)">Guardar dog en Favoritos</button>
+            <img class="img" id="img1" alt="Foto gato Aleatorio">
+            <button id="favorites1" onclick="saveFavouriteCats()">
+                Guardar dog en Favoritos
+            </button>
         </div>
     </article>
+
     <article>
         <div class="image-container">
-            <img class="img" id="img2" src="" alt="Dog" data-id="2">
-            <button id="favorites2" onclick="saveFavouriteDogs(2)">Guardar dog en Favoritos</button>
+            <img class="img" id="img2"  alt="Foto gato Aleatorio">
+            <button id="favorites2" onclick="saveFavouriteCats()">
+                Guardar gato en Favoritos
+            </button>
         </div>
     </article>
+    <button id="reload" onclick="loadRandomCats()">Reload</button>
 </section>
 
 <section id="saveFavouriteDogs">
-    <h2>Perros Favoritos</h2>
+    <h2>Gatos Favoritos</h2>
 
     <article>
         <div class="image-container">
-            <img class="img" id="img3" src="" alt="Dog" data-id="3">
-            <button id="favorites3">Sacar al dog de favoritos</button>
+            <img class="img" id="img3" alt="Foto gato Aleatorio">
+            <button id="favorites3">
+                Sacar al dog de favoritos
+            </button>
         </div>
     </article>
 </section>
-<button id="reload">Reload</button>
+
 <script src="main.js"></script>
 </body>
 </html>
