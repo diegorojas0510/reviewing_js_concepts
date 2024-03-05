@@ -1,8 +1,8 @@
 // pruebas de funcionamiento
 console.log('Hello, word');
 
-const API_URL_RAMDOM = "https://api.thedogapi.com/v1/images/search?limit=2&api_key=";
-const API_URL_FAVOTITES = "https://api.thedogapi.com/v1/images/search?favourites?limit=2&api_key="
+const API_URL_RAMDOM = "https://api.thedogapi.com/v1/images/search?limit=2&api_key=live_TQbkEDPisyPb0Kz6NGkKcKJApq4ScCC7Q5E9mA6jQII4C6hCaQnzhS3wNXhKctfL";
+const API_URL_FAVOTITES = "https://api.thedogapi.com/v1/images/search?/favourites?limit=1&api_key=live_TQbkEDPisyPb0Kz6NGkKcKJApq4ScCC7Q5E9mA6jQII4C6hCaQnzhS3wNXhKctfL"
 // reconociendo mi url
 /*
 HTTPS = Protocolo de transferencia de datos de manera segura (Protocolo de Transferencia de Hipertexto Seguro):
@@ -19,6 +19,13 @@ en este caso son 10.mil
 
 const spanError = document.getElementById('error');
 
+const statusCodes = {
+    200: "OK",
+    400: "Bad Request",
+    401: "Unauthorized",
+    404: "Not Found",
+    500: "Internal Server Error"
+};
 async function loadRandomDogs() {
     try {
         const response = await fetch(API_URL_RAMDOM);
@@ -41,15 +48,18 @@ async function loadRandomDogs() {
             img2.src = data[1].url;
             img3.src = data[2].url;
             img4.src = data[3].url;
-            img5.src = data[5].url;
+            img5.src = data[4].url;
         }
 
     } catch (error) {
         console.error('Error fetching Dog image:', error);
+        spanError.innerHTML = "Error los perros no se pueden cargar aleatoreamente." +error.message;
     }
 }
+loadRandomDogs();
 
-async function favoritesRandomDogs() {
+
+async function favoritesDogs() {
     try {
         const response = await fetch(API_URL_FAVOTITES);
         // await es para esperar que una operación asíncrona, como una solicitud de red o una lectura de archivo, se complete antes de continuar ejecutando el resto del código en la función.
@@ -63,16 +73,18 @@ async function favoritesRandomDogs() {
 
     } catch (error) {
         console.error('Error :', error);
+        spanError.innerHTML = "Hubo un error al cargar los perros." +error.message;
     }
 }
+favoritesDogs();
 
 // Asignar el evento click al botón para obtener una nueva imagen
 const button = document.getElementById('reload');
 button.addEventListener('click', loadRandomDogs);
 
 // Ejecutar la función al cargar la página
-document.addEventListener('DOMContentLoaded', loadRandomDogs);
-document.addEventListener('DOMContentLoaded', favoritesRandomDogs);
+//document.addEventListener('DOMContentLoaded', loadRandomDogs);
+//document.addEventListener('DOMContentLoaded', favoritesDogs);
 
 
 
