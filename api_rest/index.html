@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Cats App</h1>
-
+<h1>Michis App</h1>
+<div class="image-container">
+<button id="reload" onclick="loadRandomCats()">Recargar Michis</button>
+</div>
 <span id="error"></span>
 
 <section id="loadRandomCats">
@@ -17,35 +19,35 @@
 
     <article>
         <div class="image-container">
-            <img class="img" id="img1" alt="Foto gato Aleatorio">
-            <button id="favorites1" onclick="saveFavouriteCats()">
-                Guardar dog en Favoritos
-            </button>
-        </div>
-    </article>
-
-    <article>
-        <div class="image-container">
-            <img class="img" id="img2"  alt="Foto gato Aleatorio">
-            <button id="favorites2" onclick="saveFavouriteCats()">
+            <img class="img" src="" id="img1" alt="Foto gato Aleatorio">
+            <button id="btn1" >
                 Guardar gato en Favoritos
             </button>
         </div>
     </article>
-    <button id="reload" onclick="loadRandomCats()">Reload</button>
-</section>
-
-<section id="saveFavouriteDogs">
-    <h2>Gatos Favoritos</h2>
 
     <article>
         <div class="image-container">
-            <img class="img" id="img3" alt="Foto gato Aleatorio">
-            <button id="favorites3">
-                Sacar al dog de favoritos
+            <img class="img" src="" id="img2"  alt="Foto gato Aleatorio">
+            <button id="btn2" >
+                Guardar gato en Favoritos
             </button>
         </div>
     </article>
+
+</section>
+
+<section id="saveFavouriteCats">
+    <h2>Michis Favoritos</h2>
+
+    <article>
+        <div class="image-container">
+            <button id="favorites3">
+                Sacar al michi de favoritos
+            </button>
+        </div>
+    </article>
+
 </section>
 
 <script src="main.js"></script>
