@@ -2,7 +2,7 @@
 console.log('Hello, word');
 
 const API_URL_RANDOM = 'https://api.thecatapi.com/v1/images/search?limit=2&api_key=c08d415f-dea7-4a38-bb28-7b2188202e46';
-const API_URL_FAVOTITES = 'https://api.thecatapi.com/v1/favourites?api_key=c08d415f-dea7-4a38-bb28-7b2188202e46';
+const API_URL_FAVOTITES = 'https://api.thecatapi.com/v1/favourites?api_key=';
 const API_URL_FAVOTITES_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}?api_key=c08d415f-dea7-4a38-bb28-7b2188202e46`;
 // reconociendo mi url
 /*
@@ -59,7 +59,12 @@ async function loadRandomCats() {
 
 async function loadFavouritesCats() {
     try {
-        const response = await fetch(API_URL_FAVOTITES);
+        const response = await fetch(API_URL_FAVOTITES, {
+            method: 'GET',
+            headers: {
+                'X-API-KEY': 'c08d415f-dea7-4a38-bb28-7b2188202e46'
+            }
+        });
         // await es para esperar que una operación asíncrona, como una solicitud de red o una lectura de archivo, se complete antes de continuar ejecutando el resto del código en la función.
         const data = await response.json();
         console.log('Gatos Favoritos');
@@ -148,9 +153,6 @@ async function deleteFavouriteCats(id) {
         spanError.innerHTML = `Hubo un error al guardar los gatos en favoritos. ${error.message}`;
     }
 }
-
-
-
 
 
 // Asignar el evento click al botón para obtener una nueva imagen
