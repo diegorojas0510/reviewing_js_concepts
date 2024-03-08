@@ -1,9 +1,10 @@
 // pruebas de funcionamiento
 console.log('Hello, word');
 
-const API_URL_RANDOM = 'https://api.thecatapi.com/v1/images/search?limit=2&api_key=c08d415f-dea7-4a38-bb28-7b2188202e46';
+const API_URL_RANDOM = 'https://api.thecatapi.com/v1/images/search?limit=4&api_key=c08d415f-dea7-4a38-bb28-7b2188202e46';
 const API_URL_FAVOTITES = 'https://api.thecatapi.com/v1/favourites?api_key=';
-const API_URL_FAVOTITES_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}?api_key=c08d415f-dea7-4a38-bb28-7b2188202e46`;
+const API_URL_FAVOTITES_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}?api_key=`;
+const API_URL_UPLOAD = 'https://api.thecatapi.com/v1/images/upload';
 // reconociendo mi url
 /*
 HTTPS = Protocolo de transferencia de datos de manera segura (Protocolo de Transferencia de Hipertexto Seguro):
@@ -41,14 +42,22 @@ async function loadRandomCats() {
         }else {
             const img1 = document.getElementById('img1');
             const img2 = document.getElementById('img2');
+            const img3 = document.getElementById('img3');
+            const img4 = document.getElementById('img4');
             const btn1 = document.getElementById('btn1');
             const btn2 = document.getElementById('btn2');
+            const btn3 = document.getElementById('btn3');
+            const btn4 = document.getElementById('btn4');
 
             img1.src = data[0].url;
             img2.src = data[1].url;
+            img3.src = data[2].url;
+            img4.src = data[3].url;
 
             btn1.onclick = () => saveFavouriteCats(data[0].id)
             btn2.onclick = () => saveFavouriteCats(data[1].id)
+            btn3.onclick = () => saveFavouriteCats(data[2].id)
+            btn4.onclick = () => saveFavouriteCats(data[3].id)
         }
 
     } catch (error) {
@@ -111,6 +120,7 @@ async function saveFavouriteCats(id) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'X-API-KEY': 'c08d415f-dea7-4a38-bb28-7b2188202e46'
             },
             body: JSON.stringify({
                 image_id: id,
@@ -138,6 +148,9 @@ async function deleteFavouriteCats(id) {
     try {
         const response = await fetch(API_URL_FAVOTITES_DELETE(id), {
             method: 'DELETE',
+            headers: {
+                'X-API-KEY': 'c08d415f-dea7-4a38-bb28-7b2188202e46'
+            }
         });
 
          const data = await response.json();
@@ -154,10 +167,36 @@ async function deleteFavouriteCats(id) {
     }
 }
 
+async function uploadMichiPhoto() {
+    const form = document.getElementById('uploadingForm')
+    const formData = new FormData(form);
+
+    console.log(formData.get('file'))
+
+    const res = await fetch(API_URL_UPLOAD, {
+        method: 'POST',
+        headers: {
+            // 'Content-Type': 'multipart/form-data',
+            'X-API-KEY': 'c08d415f-dea7-4a38-bb28-7b2188202e46',
+        },
+        body: formData,
+    })
+    const data = await res.json();
+
+    if (res.status !== 201) {
+        spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+        console.log({data})
+    } else {
+        console.log('Foto de michi subida :)')
+        console.log({data})
+        console.log(data.url)
+        saveFavouriteCats(data.id);
+    }
+}
+
 
 // Asignar el evento click al botón para obtener una nueva imagen
 const button = document.getElementById('reload');
-button.addEventListener('click', loadRandomCats);
 
 // Ejecutar la función al cargar la página
 document.addEventListener('DOMContentLoaded', loadRandomCats);

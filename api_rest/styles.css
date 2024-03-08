@@ -1,67 +1,78 @@
-h1 {
-    text-align: center; /* Centra el texto horizontalmente */
-    font-size: 24px; /* Tamaño de fuente deseado */
-    color: #333; /* Color del texto */
-    margin-bottom: 20px; /* Espacio inferior */
+body {
+    font-family: sans-serif;  /* Set the default font */
+    margin: 0;  /* Remove default margin */
+    padding: 0;  /* Remove default padding */
 }
 
+h1 {
+    text-align: center;  /* Center align the title */
+    font-size: 2em;  /* Set the font size for the title */
+    margin-bottom: 1em;  /* Add some space below the title */
+}
 
 .image-container {
-    display: flex;
-    flex-wrap: wrap; /* Para que las imágenes se envuelvan en varias filas si es necesario */
-    justify-content: center; /* Centra horizontalmente las imágenes */
-    align-items: center; /* Centra verticalmente las imágenes */
-    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
-}
-
-button {
-    display: block; /* Hacer que el botón sea un bloque para poder centrarlo */
-    margin: 0 auto; /* Centra horizontalmente el botón */
-    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
-    font-size: 16px; /* Tamaño de fuente del botón */
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none; /* Quita el borde */
-    border-radius: 5px; /* Agrega bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s; /* Agregamos una transición para suavizar el cambio de color */
-}
-
-button:hover {
-    background-color: #00b32d; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+    display: flex;  /* Arrange elements horizontally */
+    flex-wrap: wrap;  /* Allow elements to wrap on smaller screens */
+    justify-content: space-around;  /* Distribute elements evenly */
+    margin: 1em auto;  /* Add margin for spacing and center horizontally */
+    width: 80%;  /* Set the width of the image container */
 }
 
 .img {
-    width: 200px; /* Ancho deseado */
-    height: 200px; /* Alto deseado */
-    object-fit: cover; /* Para mantener la relación de aspecto y llenar el contenedor */
-    margin: 10px; /* Espacio entre las imágenes */
+    width: 200px;  /* Set the width of the cat images */
+    height: 200px;  /* Set the height of the cat images */
+    object-fit: cover;  /* Ensure images fill the container */
+    margin: 0.5em;  /* Add some space between images */
+    border-radius: 5px;  /* Add rounded corners to the images */
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+button {
+    background-color: #4CAF50;  /* Green color for buttons */
+    color: white;  /* White text color for buttons */
+    padding: 0.5em 1em;  /* Add padding to buttons */
+    border: none;  /* Remove default border from buttons */
+    border-radius: 5px;  /* Add rounded corners to buttons */
+    cursor: pointer;  /* Change cursor style to indicate clickability */
 }
 
-/*section {
-    display: flex;
-    width: 600px;
-    height: 430px;
-}*/
+button:hover {
+    background-color: #3e8e41;  /* Darker green for button hover */
+}
 
-/*section img {
-    width: 0px;
-   flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-}*/
+section {
+    margin: 1em auto;  /* Add margin for spacing and center horizontally */
+    width: 80%;  /* Set the width of the sections */
+    border: 1px solid #ddd;  /* Add a border to sections */
+    border-radius: 5px;  /* Add rounded corners to sections */
+    padding: 1em;  /* Add padding for content within sections */
+}
 
-section img:hover{
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
+h2 {
+    text-align: center;  /* Center align section titles */
+    margin-bottom: 0.5em;  /* Add some space below section titles */
+}
+
+#uploadingMichi form {
+    display: flex;  /* Arrange form elements horizontally */
+    flex-direction: column;  /* Stack elements vertically */
+    align-items: center;  /* Center elements horizontally */
+    margin: 0 auto;  /* Center the form horizontally */
+}
+
+#uploadingMichi button {
+    margin-top: 1em;  /* Add some space above the submit button */
+}
+
+#saveFavouriteCats article {
+    display: flex;  /* Arrange favorite cat elements horizontally */
+    justify-content: space-between;  /* Distribute elements */
+    align-items: center;  /* Center elements vertically */
+    margin-bottom: 1em;  /* Add some space below each favorite cat */
+}
+
+#error {
+    color: red;  /* Set error messages to red */
+    text-align: center;  /* Center align error messages */
+    margin: 1em auto;  /* Add margin and center horizontally */
+    /* You can add font styles or size for errors here */
 }
