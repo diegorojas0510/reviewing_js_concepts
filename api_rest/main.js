@@ -1,23 +1,13 @@
 // pruebas de funcionamiento
-console.log('Hello, word');
-
+//console.log('Hello, word');
+// endpoint: https://api.thecatapi.com/
+// ruta v1/images/search
+// limit=4 parametyros de consulta
+// api key
 const API_URL_RANDOM = 'https://api.thecatapi.com/v1/images/search?limit=4&api_key=c08d415f-dea7-4a38-bb28-7b2188202e46';
 const API_URL_FAVOTITES = 'https://api.thecatapi.com/v1/favourites?api_key=';
 const API_URL_FAVOTITES_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}?api_key=`;
 const API_URL_UPLOAD = 'https://api.thecatapi.com/v1/images/upload';
-// reconociendo mi url
-/*
-HTTPS = Protocolo de transferencia de datos de manera segura (Protocolo de Transferencia de Hipertexto Seguro):
-Host y Endpoint api.thedogapi.com este es el servidor al que se le hace la solicitud
-Ruta v1/images/search: este enpoint es la ruta que maneja la solicitud especifica
-?: indica el inicio de de lo párametros de consulta en este caso limit=10
-Limit=10: Este párametro limita el número de resultados que se devuelven en la respuesta de la api cantidad de perros 10
-&: Sirve parta concatenar
-api_key: le pasamos la key para autenticarnos en nuestra aplicación con esto la api sabra quienes somos y si tenemos limitantes nos empesara a contar las peticiones
-en este caso son 10.mil
-* */
-// Función asíncrona que realiza la petición a la API eliminando los multiples usos de .then y siendo más legible la lectura de la función
-// la función asincrona en js permite realizar tareas que pueden llevar tiempo sin bloquar la ejecución del resto del código
 
 const spanError = document.getElementById('error');
 
@@ -110,7 +100,7 @@ async function loadFavouritesCats() {
 
     } catch (error) {
         console.error('Error :', error);
-        spanError.innerHTML = "Hubo un error al cargar los perros." + error.message;
+        spanError.innerHTML = "Hubo un error al cargar los Michis." + error.message;
     }
 }
 
@@ -176,7 +166,7 @@ async function uploadMichiPhoto() {
     const res = await fetch(API_URL_UPLOAD, {
         method: 'POST',
         headers: {
-            // 'Content-Type': 'multipart/form-data',
+            //'Content-Type': 'multipart/form-data',
             'X-API-KEY': 'c08d415f-dea7-4a38-bb28-7b2188202e46',
         },
         body: formData,
